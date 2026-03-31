@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATANADREAMS | Dreamcast Audio Engine</title>
+    <style>
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #050505;
+    color: #FF6600;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: opacity 2s ease-out;
+}
+
+#main-content {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: #FF6600;
+    animation: blink 1s step-end infinite;
+    vertical-align: bottom;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+        body {
+            background-color: #111111; 
+            background-image: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.25)), url('samurai.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #cccccc;
+            font-family: 'Courier New', Courier, monospace;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #FF6600;
+            font-weight: normal;
+        }
+        h1 {
+            border-bottom: 2px solid #FF6600;
+            padding-bottom: 10px;
+            letter-spacing: 2px;
+            font-size: 2.5em;
+        }
+        a {
+            color: #FF6600;
+            text-decoration: none;
+            border-bottom: 1px dotted #FF6600;
+            transition: all 0.2s;
+        }
+        a:hover {
+            background-color: #FF6600;
+            color: #111111;
+        }
+        .btn {
+            display: inline-block;
+            border: 1px solid #FF6600;
+            padding: 12px 24px;
+            margin: 15px 15px 15px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            backdrop-filter: blur(2px);
+        }
+        .terminal {
+            background-color: rgba(10, 10, 10, 0.7);
+            padding: 20px;
+            border-left: 3px solid #FF6600;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .highlight {
+            color: #ffffff;
+        }
+        .footer {
+            margin-top: 60px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.85em;
+            color: #666;
+            text-align: center;
+            background-color: rgba(17, 17, 17, 0.8);
+            padding-bottom: 20px;
+        }
+        .crypto {
+            color: #888;
+            word-break: break-all;
+        }
+		
+		#power-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FF6600;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 1px solid #FF6600;
+    padding: 15px 30px;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+    animation: pulse 2s infinite;
+}
+
+#power-button:hover {
+    background-color: #FF6600;
+    color: #050505;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 102, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0); }
+}
+    </style>
+</head>
+<body>
+    <div id="boot-screen">
+		<div id="power-button">[ PRESS POWER BUTTON ]</div>
+		<div id="terminal-text"></div><span class="cursor" id="term-cursor" style="display: none;"></span>
+    </div>
+<div id="main-content">
+    <header>
+        <h1>KATANADREAMS v1.0</h1>
+        <p>25 Years of Loyalty.</p>
+    </header>
+
+    <section class="terminal">
+        <h2>&gt; THE RELEASE</h2>
+        <p>Time is fleeting. It’s hard to believe a quarter of a century has passed since the day the assembly lines stopped. A quarter of a century lost to oblivion? No. A quarter of a century of absolute loyalty to the platform.</p>
+        <p>They powered down the machines on March 31, 2001, deciding the story was over. But silicon doesn't die on a corporate schedule. It simply waits for those who can write the right code and unlock its true potential.</p>
+        <p>Introducing <span class="highlight">KatanaDreamsPlayer v1.0</span>.</p>
+        <p>Native AICA ARM7 Execution: Direct execution of DSF code on the sound coprocessor, with seamless switching to decoded PCM streams.</p>
+        <p>Supported Formats: DSF, FLAC, OGG, WAV, MP3, M4A, ADX, SPSD, GENH</p>
+		<p>SD Support: Full FATFS integration. Play music libraries directly from SD card.</p>
+		<p>Along the way, we squashed an annoying off-by-one bug in the KOS core. A week of clicking audio, solved by deleting a single -1.</p>
+    </section>
+
+    <section class="terminal">
+        <h2>&gt; THE MASTERS</h2>
+        <p>This project stands on the shoulders of giants:</p>
+        <ul>
+            <li>The creators and maintainers of the KallistiOS core.</li>
+            <li>The developers of the Helix, libflac, and libtremor libraries.</li>
+            <li>The format pioneers and meticulous archivists: kingshriek, knurek, and the entire community.</li>
+        </ul>
+        <p>You preserved the legacy. We wrote the player. The music has finally returned to its native hardware.</p>
+    </section>
+
+    <section class="terminal">
+        <h2>&gt; THE DROP</h2>
+        <p>The release image is bundled with test audio files. Hook up your gear and let the hardware speak for itself.</p>
+        <p><span class="highlight">Time to air out your Dreamcast. NOW.</span></p>
+        
+        <div>
+            <a href="https://github.com/KatanaDreamsDev/KatanaDreamsPlayer-Releases/releases" class="btn">[ DOWNLOAD CDI IMAGE ]</a>
+        </div>
+    </section>
+
+    <section class="terminal">
+        <h2>&gt; NEXT</h2>
+        <p>- New audio formats.</p>
+        <p>- New GUI.</p>
+        <p>- To Keep Dreaming!</p>
+        <br>
+        <p>The foundation is set. The blade returns to the scabbard, but the hand remains on the hilt. We fade into the shadows. Do not look to us for answers, for we speak only through our work. We remain unseen and unheard, but we are among you. The hour will come, and we shall return.</p>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 KatanaDreamsDev. Operating from the shadows.</p>
+    </footer>
+ </div>
+<script>
+    const bootSequence = [
+        "KatanaDreams Player v1.0",
+        "Loading AICA microcode... OK",
+        "Checking LEA hardware boundaries...",
+        "WARNING: KOS 2.2.1 off-by-one anomaly detected.",
+        "Applying hotfix: [chan->loopend = chan->length]... PATCHED",
+        "Initializing Helix Audio Engine (MP3/AAC)... OK",
+		"Initializing Katana Transport Protocol (KTP)... OK",
+		"Probing for Katana Media Server (KMS)... [STANDBY FOR STAGE 2]",
+		"Mounting GD-ROM... READY",
+		"Mounting SD card... NO SD CARD DETECTED",
+		"Executing: airing_out_dreamcast.sh... SUCCESS",
+        "Status: OK",
+        "Entering KatanaDreams..."
+    ];
+
+    const terminalText = document.getElementById('terminal-text');
+    const bootScreen = document.getElementById('boot-screen');
+    const mainContent = document.getElementById('main-content');
+    const powerButton = document.getElementById('power-button');
+    const cursor = document.getElementById('term-cursor');
+    
+    const bootSound = new Audio('dreamcast_boot.mp3'); 
+    let lineIndex = 0;
+
+    function typeLine() {
+        if (lineIndex < bootSequence.length) {
+            const line = document.createElement('div');
+            line.textContent = "> " + bootSequence[lineIndex];
+            terminalText.appendChild(line);
+            lineIndex++;
+            
+            const randomDelay = Math.random() * 220 + 120; 
+            
+            if (lineIndex === 6) {
+                setTimeout(typeLine, 1000); 
+            } else {
+                setTimeout(typeLine, randomDelay);
+            }
+        }
+    }
+
+    powerButton.addEventListener('click', () => {
+        powerButton.style.display = 'none';
+        cursor.style.display = 'inline-block';
+        
+        bootSound.play();
+        
+        setTimeout(typeLine, 500); 
+
+        setTimeout(() => {
+            bootScreen.style.opacity = '0';
+            mainContent.style.opacity = '1';
+            
+            setTimeout(() => {
+                bootScreen.style.display = 'none';
+            }, 2500);
+            
+        }, 5000);
+    });
+</script>
+</body></html>
