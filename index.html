@@ -2,7 +2,7 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KATANADREAMS | Dreamcast Audio Engine</title>
+    <title>KATANADREAMS v1.1 Beta | Dreamcast Music Player</title>
     <style>
 #boot-screen {
     position: fixed;
@@ -140,51 +140,44 @@
     </div>
 <div id="main-content">
     <header>
-        <h1>KATANADREAMS v1.0</h1>
-        <p>25 Years of Loyalty.</p>
+        <h1>KATANADREAMS v1.1 [BETA]</h1>
+        <p>The New Union.</p>
     </header>
 
     <section class="terminal">
-        <h2>&gt; THE RELEASE</h2>
-        <p>Time is fleeting. It’s hard to believe a quarter of a century has passed since the day the assembly lines stopped. A quarter of a century lost to oblivion? No. A quarter of a century of absolute loyalty to the platform.</p>
-        <p>They powered down the machines on March 31, 2001, deciding the story was over. But silicon doesn't die on a corporate schedule. It simply waits for those who can write the right code and unlock its true potential.</p>
-        <p>Introducing <span class="highlight">KatanaDreamsPlayer v1.0</span>.</p>
-        <p>Native AICA ARM7 Execution: Direct execution of DSF code on the sound coprocessor, with seamless switching to decoded PCM streams.</p>
-        <p>Supported Formats: DSF, FLAC, OGG, WAV, MP3, M4A, ADX, SPSD, GENH</p>
-		<p>SD Support: Full FATFS integration. Play music libraries directly from SD card.</p>
-		<p>Along the way, we squashed an annoying off-by-one bug in the KOS core. A week of clicking audio, solved by deleting a single -1.</p>
+        <h2>&gt; THE REFORGE</h2>
+        <p>On March 31, we answered the silence of the assembly lines with version 1.0. The first battle revealed micro-fractures on the edge. We acknowledged the chips and returned to the forge.</p>
+        <p>On October 1, 2003, the independent clans of Sega fell&mdash;legendary internal studios were dissolved in a corporate merger.</p>
+        <p>Today, we forge a different kind of union. A pact between blacksmiths and warriors. To hone the weapon to absolute perfection, we pass it into your hands.</p>
     </section>
 
     <section class="terminal">
-        <h2>&gt; THE MASTERS</h2>
-        <p>This project stands on the shoulders of giants:</p>
-        <ul>
-            <li>The creators and maintainers of the KallistiOS core.</li>
-            <li>The developers of the Helix, libflac, and libtremor libraries.</li>
-            <li>The format pioneers and meticulous archivists: kingshriek, knurek, and the entire community.</li>
-        </ul>
-        <p>You preserved the legacy. We wrote the player. The music has finally returned to its native hardware.</p>
+        <h2>&gt; THE ARSENAL</h2>
+        <p>The secrets of the alloy remain in the forge. You will understand everything once the blade leaves the scabbard.</p>
+        <p>- <span class="highlight">Form:</span> A reforged interface and the aesthetic of glowing symbols.</p>
+        <p>- <span class="highlight">Reflection:</span> A classic visualizer and a living, pulsating fractal. Their edges still await the final polish.</p>
+        <p>- <span class="highlight">Control:</span> Rewind and volume controls implemented.</p>
+        <p>- <span class="highlight">Memory:</span> Reliable and stable SD card operation.</p>
     </section>
 
     <section class="terminal">
-        <h2>&gt; THE DROP</h2>
-        <p>The release image is bundled with test audio files. Hook up your gear and let the hardware speak for itself.</p>
-        <p><span class="highlight">Time to air out your Dreamcast. NOW.</span></p>
-                <div>
-            <a href="https://github.com/KatanaDreamsDev/KatanaDreamsPlayer-Releases/releases" class="btn">[ DOWNLOAD CDI IMAGE ]</a>
-			 <div>
-            <a href="http://katanadreamsdev.github.io/KatanaDreams_CDI_Builder.zip" class="btn">[ DOWNLOAD CDI BUILDER ]</a>
-        </div>
+        <h2>&gt; RESONANCE</h2>
+        <p>The merger erased the names of the studios, but not their legacy. The true sound architects of Overworks and Sonic Team didn't just write music&mdash;they made the AICA silicon breathe.</p>
+        <p>In tribute to their art, the test image carries new vibrations. We have packed the release with fresh remixes of the era's great anthems&mdash;<span class="highlight">Skies of Arcadia</span> and <span class="highlight">Phantasy Star Online</span>.</p>
+        <p>Close your eyes. Let the past resonate.</p>
+        <div>
+            <a href="https://github.com/KatanaDreamsDev/KatanaDreamsPlayer-Releases/releases" class="btn">[ DOWNLOAD v1.1 BETA CDI ]</a>
+            <div>
+            <a href="https://katanadreamsdev.github.io/KatanaDreams_CDI_Builder_1.1.zip" class="btn">[ DOWNLOAD CDI BUILDER ]</a>
+            </div>
         </div>
     </section>
 
     <section class="terminal">
-        <h2>&gt; NEXT</h2>
-        <p>- New audio formats.</p>
-        <p>- New GUI.</p>
-        <p>- To Keep Dreaming!</p>
-        <br>
-        <p>The foundation is set. The blade returns to the scabbard, but the hand remains on the hilt. We fade into the shadows. Do not look to us for answers, for we speak only through our work. We remain unseen and unheard, but we are among you. The hour will come, and we shall return.</p>
+        <h2>&gt; THE PACT</h2>
+        <p>We hand you the prototype. Test its balance. Swing the blade through your audio libraries, find its breaking points, and send word to the shadows.</p>
+        <p>A special honor goes to the shadow warrior, <span class="highlight">The Sega Shop</span>. Your strikes in the early trials helped temper this steel.</p>
+        <p><span class="highlight">Now, we no longer strike alone.</span></p>
     </section>
 
     <footer class="footer">
@@ -193,17 +186,16 @@
  </div>
 <script>
     const bootSequence = [
-        "KatanaDreams Player v1.0",
+        "KatanaDreams Player v1.1 Beta",
         "Loading AICA microcode... OK",
-        "Checking LEA hardware boundaries...",
-        "WARNING: KOS 2.2.1 off-by-one anomaly detected.",
-        "Applying hotfix: [chan->loopend = chan->length]... PATCHED",
         "Initializing Helix Audio Engine (MP3/AAC)... OK",
-		"Initializing Katana Transport Protocol (KTP)... OK",
-		"Probing for Katana Media Server (KMS)... [STANDBY FOR STAGE 2]",
-		"Mounting SD card ...",
-		"[OK] SDXC 256GB exFAT MOUNTED",
-		"Executing: running_gag.sh... Error: 404 Joke Not Found ",
+        "Spinning up FFT-2048 on SH-4... OK",
+        "Syncing visualizer to AICA playhead... LOCKED",
+        "Beat tracker: listening for the kick... 133 BPM",
+        "Initializing Katana Dreams Transport Protocol (KDTP)... OK",
+        "Probing for Katana Dreams Media Server (KDMS)... [HANDSHAKE IN PROGRESS]",
+        "Mounting SD card... [OK] SDXC 256GB exFAT MOUNTED",
+        "Building KatanaDB: 1 pass, 0 seeks... OK",
         "Status: OK",
         "Entering KatanaDreams..."
     ];
@@ -226,7 +218,7 @@
             
             const randomDelay = Math.random() * 220 + 120; 
             
-            if (lineIndex === 6) {
+            if (lineIndex === 4) { // пауза после строки FFT
                 setTimeout(typeLine, 1000); 
             } else {
                 setTimeout(typeLine, randomDelay);
